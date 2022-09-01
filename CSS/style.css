@@ -1,5 +1,6 @@
 :root {
   font-size: 62.5%; /* 1rem = 10px */
+  --primary-color: #404e82;
 }
 
 * {
@@ -17,14 +18,13 @@ body {
 }
 
 header {
-  background: #394674;
+  background: var(--primary-color);
   color: #fff;
   width: 100%;
   padding: 0.5rem;
 
   display: flex;
   justify-content: center;
-
 }
 
 nav {
@@ -44,11 +44,10 @@ form {
 }
 
 footer {
-  background: #394674;
+  background: var(--primary-color);
   color: #fff;
   width: 100%;
   padding: 0.5rem;
-
   position: absolute;
   display: flex;
   justify-content: center;
