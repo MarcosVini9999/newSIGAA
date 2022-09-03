@@ -16,7 +16,7 @@ body {
 
 header {
   background: var(--primary-color);
-  color: #fff;
+  color: var(--white-color);
   width: 100%;
   padding: 0.5rem;
   display: flex;
@@ -43,7 +43,7 @@ form {
 
 footer {
   background: var(--primary-color);
-  color: #fff;
+  color: var(--white-color);
   width: 100%;
   padding: 0.5rem;
   position: absolute;
