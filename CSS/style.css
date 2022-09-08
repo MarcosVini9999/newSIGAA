@@ -15,6 +15,7 @@ body {
 }
 
 header {
+  display: block;
   background: var(--primary-color);
   color: var(--white-color);
   width: 100%;
@@ -22,8 +23,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
 }
 
 nav {
@@ -46,8 +45,8 @@ footer {
   color: var(--white-color);
   width: 100%;
   padding: 0.5rem;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
-  bottom: 0;
+  margin-top: auto;
 }

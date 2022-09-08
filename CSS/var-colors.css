@@ -1,5 +1,6 @@
 :root {
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%;
+  /* 1rem = 10px */
   --primary-color: #404e82;
   --secondary-color: #c4d2eb;
   --tertiary-color: #eff3fa;
