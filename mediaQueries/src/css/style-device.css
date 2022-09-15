@@ -1,73 +1,73 @@
-#handheld-device{
-    width: 100vw;
+#handheld-device {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+#desktop-device {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+#tv-device {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.green {
+  background-color: green;
+  display: none;
+  width: 100vw;
+}
+
+.blue {
+  background-color: blue;
+  display: none;
+  width: 100vw;
+}
+
+.pink {
+  background-color: pink;
+  display: none;
+  width: 100vw;
+}
+
+@media (max-width: 479px) {
+  #handheld-device {
+    display: block;
+  }
+  .green {
     height: 100vh;
-    display: none;
+    display: block;
+  }
 }
-#desktop-device{
-    width: 100vw;
-    height: 100vh;
-    display: none;
-}
-#tv-device{
-    width: 100vw;
-    height: 100vh;
-    display: none;
-}
-
-.green{
-    background-color: green;
-    display: none;
-    width: 100vw;
-}
-
-.blue{
-    background-color: blue;
-    display: none;
-    width: 100vw;
-}
-
-.pink{
-    background-color: pink;
-    display: none;
-    width: 100vw;
-}
-
-@media (max-width: 479px) { 
-    #handheld-device{
-        display: block;
-    }
-    .green{
-        height: 100vh;
-        display: block;
-    }
-}
-@media (min-width: 480px) and (max-width: 1279px){ 
-    #desktop-device{
-        display: block;
-    }
-    .green{
-        height: 50vh;
-        display: block;
-    }
-    .blue{
-        height: 50vh;
-        display: block;
-    }
+@media (min-width: 480px) and (max-width: 1279px) {
+  #desktop-device {
+    display: block;
+  }
+  .green {
+    height: 50vh;
+    display: block;
+  }
+  .blue {
+    height: 50vh;
+    display: block;
+  }
 }
 @media (min-width: 1280px) {
-    #tv-device{
-        display: block;
-    }
-    .green{
-        height: 20vh;
-        display: block;
-    }
-    .blue{
-        height: 20vh;
-        display: block;
-    }
-    .pink{
-        height: 20vh;
-        display: block;
-    }
+  #tv-device {
+    display: block;
+  }
+  .green {
+    height: 20vh;
+    display: block;
+  }
+  .blue {
+    height: 20vh;
+    display: block;
+  }
+  .pink {
+    height: 20vh;
+    display: block;
+  }
 }

@@ -1,55 +1,55 @@
-#media-queries{
-    width: 100vw;
-    height: 100vh;
+#media-queries {
+  width: 100vw;
+  height: 100vh;
 }
 
-#landscape{
-    display: none;
+#landscape {
+  display: none;
 }
 
 @media (min-width: 320px) {
-    #media-queries{
-        background-color: black;
-    }
+  #media-queries {
+    background-color: black;
+  }
 }
 @media (min-width: 480px) {
-    #media-queries{
-        background-color: lightblue;
-    }
+  #media-queries {
+    background-color: lightblue;
+  }
 }
 @media (min-width: 600px) {
-    #media-queries{
-        background-color: lightgreen;
-    }
+  #media-queries {
+    background-color: lightgreen;
+  }
 }
 @media (min-width: 768px) {
-    #media-queries{
-        background-color: lightyellow;
-    }
+  #media-queries {
+    background-color: lightyellow;
+  }
 }
 @media (min-width: 800px) {
-    #media-queries{
-        background-color: brown;
-    }
+  #media-queries {
+    background-color: brown;
+  }
 }
 @media (min-width: 1024px) {
-    #media-queries{
-        background-color: darkblue;
-    }
+  #media-queries {
+    background-color: darkblue;
+  }
 }
 @media (min-width: 1280px) {
-    #media-queries{
-        background-color: darkgreen;
-    }
+  #media-queries {
+    background-color: darkgreen;
+  }
 }
 @media (min-width: 1440px) {
-    #media-queries{
-        background-color: darkred;
-    }
+  #media-queries {
+    background-color: darkred;
+  }
 }
 
 @media (orientation: landscape) {
-    #landscape{
-        display: block;
-    }
+  #landscape {
+    display: block;
+  }
 }
