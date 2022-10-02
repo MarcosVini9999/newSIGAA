@@ -1,105 +1,302 @@
-main{
-    display: flex;
-    display: flex;
-    gap: 100px;
-    flex-direction: column;
-    background-color: aliceblue;
+@media (min-width: 768px) {
+  main {
+    width: 50%;
+  }
 }
-.flexBox{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: solid black;
-    margin: 1px;
+main {
+  display: flex;
+  gap: 100px;
+  flex-direction: column;
+  background-color: aliceblue;
+  margin-inline: auto;
 }
-.A{
-    background-color: gray;
-    grid-area: A;
+.flexBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid black;
+  margin: 1px;
 }
-.B{
-    background-color: gray;
-    grid-area: B;
+.A {
+  background-color: gray;
+  grid-area: A;
 }
-.C{
-    background-color: azure;
-    grid-area: C;
+.B {
+  background-color: gray;
+  grid-area: B;
 }
-.D{
-    background-color: gray;
-    grid-area: D;
+.C {
+  background-color: azure;
+  grid-area: C;
 }
-.E{
-    background-color: gray;
-    grid-area: E;
+.D {
+  background-color: gray;
+  grid-area: D;
 }
-.F{
-    background-color: aquamarine;
-    grid-area: F;
+.E {
+  background-color: gray;
+  grid-area: E;
 }
-.G{
-    background-color: gray;
-    grid-area: G;
+.F {
+  background-color: aquamarine;
+  grid-area: F;
 }
-.H{
-    background-color: aquamarine;
-    grid-area: H;
+.G {
+  background-color: gray;
+  grid-area: G;
 }
-#question1{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "H C A B" "D E G F";
+.H {
+  background-color: aquamarine;
+  grid-area: H;
 }
-#question2 .G{
-    display: none;
+.I {
+  background-color: gray;
 }
-#question2{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas:"H C C A" "F C C A" "F B D E";
+
+#question1 {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "H C A B" "D E G F";
 }
-#question3 .G{
-    display: none;
+#question2 .G {
+  display: none;
 }
-#question3{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas:"H C C A" "B C C A" "B D E F";
+#question2 {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "H C C A" "F C C A" "F B D E";
 }
-#question4 .E, #question4 .G, #question4 .D{
-display: none;
+#question3 .G {
+  display: none;
 }
-#question4{
-    display: grid;
-    grid-template-rows: 2fr 3fr 1fr;
-    grid-template-areas:"H H H H" "B C C A" "B F F F";
+#question3 {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "H C C A" "B C C A" "B D E F";
 }
-#question5 .E, #question5 .G{
-    display: none;
+#question4 .E,
+#question4 .G,
+#question4 .D {
+  display: none;
 }
-#question5{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:"H H H H" "C C A F" "B D D F";
+#question4 {
+  display: grid;
+  grid-template-rows: 2fr 3fr 1fr;
+  grid-template-areas: "H H H H" "B C C A" "B F F F";
 }
-#question6{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:"C C C C" "C C C C" "H A B D" "H E G F";
+#question5 .E,
+#question5 .G {
+  display: none;
 }
-#question7{
-    display: grid;
+#question5 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "H H H H" "C C A F" "B D D F";
 }
-#question7 .A{
+#question6 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "C C C C" "C C C C" "H A B D" "H E G F";
 }
-#question7 .B{
+#question7 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
 }
-#question7 .C{
+#question7 .A {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 7;
 }
-#question7 .D{
+#question7 .B {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 7;
 }
-#question7 .E{
+#question7 .C {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 7;
+  z-index: 0;
 }
-#question7 .F{
+#question7 .D {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  z-index: 1;
 }
-#question7 .G{
+#question7 .E {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  z-index: 1;
+}
+#question7 .F {
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#question7 .G {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  z-index: -2;
+}
+#question7 .H {
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#question8 {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+}
+#question8 .A {
+  grid-column-end: 2;
+  grid-column-start: 5;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  z-index: 1;
+}
+#question8 .B {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  z-index: 2;
+}
+#question8 .C {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  z-index: 0;
+}
+#question8 .D {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  z-index: -1;
+}
+#question8 .E {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  z-index: -1;
+}
+#question8 .F {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+#question8 .G {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  z-index: -1;
+}
+#question8 .H {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#question9 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 5fr 1fr 1fr;
+  grid-template-rows: 2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 2fr;
+}
+#question9 .A {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+#question9 .B {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+#question9 .C {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 8;
+}
+#question9 .D {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+#question9 .E {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+#question9 .F {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+#question9 .G {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+#question9 .H {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#question9 .I {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 8;
+}
+
+#question10 {
+  display: grid;
+  grid-template-columns: 1fr 5fr 5fr;
+  grid-template-areas: "H C A" "H C B" "H C D" "H C E";
+}
+#question10 .I,
+#question10 .G,
+#question10 .F {
+  display: none;
+}
+
+#question11 {
+  display: grid;
+  grid-template-columns: 1fr 3fr 5fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "H A C" "H B C";
+}
+#question11 .I,
+#question11 .G,
+#question11 .F,
+#question11 .E,
+#question11 .D {
+  display: none;
 }
