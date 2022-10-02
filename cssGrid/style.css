@@ -1,0 +1,105 @@
+main{
+    display: flex;
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+.flexBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid black;
+    margin: 1px;
+}
+.A{
+    background-color: gray;
+    grid-area: A;
+}
+.B{
+    background-color: gray;
+    grid-area: B;
+}
+.C{
+    background-color: azure;
+    grid-area: C;
+}
+.D{
+    background-color: gray;
+    grid-area: D;
+}
+.E{
+    background-color: gray;
+    grid-area: E;
+}
+.F{
+    background-color: aquamarine;
+    grid-area: F;
+}
+.G{
+    background-color: gray;
+    grid-area: G;
+}
+.H{
+    background-color: aquamarine;
+    grid-area: H;
+}
+#question1{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "H C A B" "D E G F";
+}
+#question2 .G{
+    display: none;
+}
+#question2{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:"H C C A" "F C C A" "F B D E";
+}
+#question3 .G{
+    display: none;
+}
+#question3{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:"H C C A" "B C C A" "B D E F";
+}
+#question4 .E, #question4 .G, #question4 .D{
+display: none;
+}
+#question4{
+    display: grid;
+    grid-template-rows: 2fr 3fr 1fr;
+    grid-template-areas:"H H H H" "B C C A" "B F F F";
+}
+#question5 .E, #question5 .G{
+    display: none;
+}
+#question5{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:"H H H H" "C C A F" "B D D F";
+}
+#question6{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:"C C C C" "C C C C" "H A B D" "H E G F";
+}
+#question7{
+    display: grid;
+}
+#question7 .A{
+}
+#question7 .B{
+}
+#question7 .C{
+}
+#question7 .D{
+}
+#question7 .E{
+}
+#question7 .F{
+}
+#question7 .G{
+}
