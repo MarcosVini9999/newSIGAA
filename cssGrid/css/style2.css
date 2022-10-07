@@ -1,105 +1,153 @@
-body{
-    margin: 0;
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 90% 5%;
+  grid-template-areas: "header" "main" "footer";
+  height: 100vh;
+  margin: 0;
 }
-header{
-    background-color: #525252;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-block: 10px;
+header {
+  grid-area: header;
+  background-color: #525252;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-block: 10px;
 }
-footer{
-    background-color: #525252;
-    padding-block: 10px;
+footer {
+  grid-area: footer;
+  background-color: #525252;
+  padding-block: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-header h1{
-    color: white;
+header h1 {
+  color: white;
 }
-footer h3{
-    color: white;
+footer h3 {
+  color: white;
 }
-h1, h2, h3{
-    margin: 0;
+h1,
+h2,
+h3 {
+  margin: 0;
 }
-main{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "A A A" "B B C";
-    margin-inline: 5%;
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "A A A" "B B C";
+  margin-inline: 5%;
 }
 button.removerButtonStyle {
-    background: none;
-    color: white;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
+  background: none;
+  color: white;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
-.imgPost{
-    height: 25vh;
-    width: 25vw;
-    background-color: darkgray;
+.imgPost {
+  height: 25vh;
+  width: 100%;
+  background-color: darkgray;
 }
-.imgItem{
-    height: 60%;
-    width: 250%;
-    background-color: darkgray;
+.imgItem {
+  height: 100px;
+  width: 200px;
+  background-color: darkgray;
 }
-.imgBanner{
-    height: 320px;
-    width: 320px;
-    border: 2px solid #525252;
+.imgBanner {
+  height: 320px;
+  width: 320px;
+  border: 2px solid #525252;
 }
-#posts{
-    display: grid;
-    grid-area: A;
-    grid-gap: 10px;
-    grid-template-areas:  "post1 post2 post3" ;
-    align-items: center;
-    justify-content: space-between;
+#posts {
+  display: grid;
+  grid-area: A;
+  grid-gap: 10px;
+  grid-template-areas: "post1 post2 post3";
+  align-items: center;
 }
-#items{
+#items {
+  grid-area: B;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "item1 item2" "item3 item4" "item5 item6";
+  justify-items: start;
+  row-gap: 10px;
+}
+#banner {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+#banner {
+  grid-area: C;
+}
+.post1 {
+  grid-area: post1;
+}
+.post2 {
+  grid-area: post2;
+}
+.post3 {
+  grid-area: post3;
+}
+.item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
+.item5 {
+  grid-area: item5;
+}
+.item6 {
+  grid-area: item6;
+}
+
+@media (max-width: 968px) {
+  body {
+    height: 100%;
+    grid-template-rows: 2% 95% 3%;
+  }
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas: "A" "B" "C";
+    row-gap: 15px;
+    margin: 0;
+  }
+  footer {
+    position: sticky;
+    bottom: 0;
+  }
+  #posts {
+    grid-template-areas: " post1 " "post2 " " post3 ";
+    justify-content: center;
+  }
+  .imgPost {
+    width: 300px;
+  }
+  #items {
     grid-area: B;
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr ;
-    grid-template-areas:  "item1 item2" "item3 item4" "item5 item6" ;
-    justify-items: start;
-}
-#banner{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-}
-#banner{
-    grid-area: C;
-}
-.post1{
-    grid-area: post1;
-}
-.post2{
-    grid-area: post2;
-}
-.post3{
-    grid-area: post3;
-}
-.item1{
-    grid-area: item1;
-}
-.item2{
-    grid-area: item2;
-}
-.item3{
-    grid-area: item3;
-}
-.item4{
-    grid-area: item4;
-}
-.item5{
-    grid-area: item5;
-}
-.item6{
-    grid-area: item6;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "item1 item2" "item3 item4" "item5 item6";
+    justify-items: center;
+  }
+  .imgItem {
+    height: 90px;
+    width: 160px;
+  }
 }
