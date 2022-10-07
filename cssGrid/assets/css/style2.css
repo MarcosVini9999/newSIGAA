@@ -14,6 +14,18 @@ header {
   justify-content: space-around;
   padding-block: 10px;
 }
+header h1 {
+  color: white;
+}
+.navBarIcon {
+  display: none;
+}
+
+.navBarIcon img {
+  width: 22px;
+  height: 22px;
+  filter: invert(1);
+}
 footer {
   grid-area: footer;
   background-color: #525252;
@@ -21,9 +33,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-header h1 {
-  color: white;
 }
 footer h3 {
   color: white;
@@ -127,6 +136,26 @@ button.removerButtonStyle {
     grid-template-areas: "A" "B" "C";
     row-gap: 15px;
     margin: 0;
+  }
+  header {
+    position: sticky;
+    top: 0;
+  }
+  #Nav-Bar {
+    display: none;
+  }
+  #toggle:checked ~ #Nav-Bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    position: fixed;
+    background-color: #00000050;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
   }
   footer {
     position: sticky;
