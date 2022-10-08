@@ -1,0 +1,28 @@
+#todasDisciplinasItems
+  .accordion-item:nth-child(2n + 1)
+  .accordion-header
+  button {
+  background-color: #c4d2eb;
+}
+#todasDisciplinasItems
+  .accordion-item:nth-child(2n)
+  .accordion-header:nth-child(2n)
+  button {
+  background-color: #eff3fa;
+}
+button.removerButtonStyle {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+button.styleButton:hover {
+  color: #404e82;
+  transition: all 0.1s ease;
+}
+code {
+  color: #d99c44;
+}

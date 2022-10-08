@@ -4,141 +4,66 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/reset.css" />
     <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/home.style.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <title>Novo Sigaa</title>
-    <style>
-      @import url(../CSS/var-colors.css);
-
-      header {
-        margin-bottom: auto;
-      }
-
-      body {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-      }
-
-      .personalInformation {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        width: 100vw;
-      }
-
-      nav .homeScroller {
-        width: 100%;
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 200px;
-        overflow-x: auto;
-        overscroll-behavior-inline: contain;
-        justify-items: center;
-        justify-content: center;
-        align-items: center;
-      }
-
-      nav .homeScroller div {
-        width: 150px;
-        height: 100px;
-        background-color: var(--secondary-color);
-        box-shadow: 0px 0px 0px, 0px 2px 2px rgba(0, 0, 0, 0.24);
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        flex-direction: row;
-        flex-wrap: nowrap;
-      }
-
-      nav .homeScroller div:hover {
-        background-color: var(--tertiary-color);
-        box-shadow: 0px 0px 1px var(--black-color),
-          0px 1px 1px rgba(0, 0, 0, 0.24);
-      }
-
-      nav .homeScroller div a {
-        text-decoration: none;
-        color: var(--black-color);
-        font-family: fantasy;
-        font-size: 2rem;
-        text-align: center;
-      }
-
-      /*media-queries*/
-      @media (min-width: 1920px) {
-      }
-
-      @media (min-width: 1360px) {
-      }
-
-      @media (min-width: 1280px) {
-      }
-
-      @media (min-width: 1100px) {
-      }
-
-      @media (min-width: 990px) {
-      }
-
-      @media (max-width: 750px) {
-        nav {
-          width: 100vw;
-          height: 80vh;
-        }
-        nav .homeScroller {
-          width: 100%;
-          display: grid;
-          grid-auto-flow: row;
-          grid-auto-rows: 150px;
-          overflow-y: auto;
-          overscroll-behavior-inline: contain;
-          justify-items: center;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-
-      @media (max-width: 450px) {
-      }
-    </style>
   </head>
 
   <body>
-    <header>
-      <h1>UFC - SIGAA -</h1>
-      <h2>Sistema Integrado de Gestão de Atividades Acadêmicas</h2>
-    </header>
     <main>
-      <section class="personalInformation">
-        <h1>Informações do usuário</h1>
+      <section>
         <p><span>MARCOS VINICIUS ANDRADE DE SOUSA</span></p>
         <p>Semestre atual: <span>2022.2</span></p>
         <p>CAMPUS DA UFC EM SOBRAL/DIRETORIA (11.00.01.28)</p>
+        <button
+          class="btn btn-primary d-flex justify-content-around align-items-center"
+          type="button"
+        >
+          <span
+            class="spinner-grow spinner-grow-sm"
+            role="status"
+            aria-hidden="true"
+          ></span>
+          Caixa de Mensagens
+        </button>
       </section>
       <nav>
         <div class="homeScroller">
-          <div><a href="./home.html">Home</a></div>
-          <div><a href="./profile.html">Perfil do usuário</a></div>
-          <div><a href="./classes.html">Disciplinas</a></div>
-          <div>
-            <a href="./resume.html">Cadastro de componentes curriculares</a>
-          </div>
+          <button
+            class="removerButtonStyle"
+            type="button"
+            onclick="window.location.href='';"
+          >
+            Home
+          </button>
+          <button
+            class="removerButtonStyle"
+            type="button"
+            onclick="window.location.href='./profile.html';"
+          >
+            Perfil do discente
+          </button>
+          <button
+            class="removerButtonStyle"
+            type="button"
+            onclick="window.location.href='./classes.html';"
+          >
+            Disciplinas
+          </button>
+          <button
+            class="removerButtonStyle"
+            type="button"
+            onclick="window.location.href='./resume.html';"
+          >
+            Cadastro de componentes curriculares
+          </button>
         </div>
       </nav>
     </main>
-    <footer>
-      <h1>
-        SIGAA | Copyright © 2010-2022 - Superintendência de Tecnologia da
-        Informação - UFC - (xx) xxxx-xxxx - xxxxxxxxxx.xxx.xx
-      </h1>
-    </footer>
   </body>
 </html>

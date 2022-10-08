@@ -4,59 +4,78 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/reset.css" />
-    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/profile.style.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <title>Novo Sigaa</title>
-    <style>
-      @import url(./var-colors.css);
-
-      .personalInformation {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .perfilHome {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: row;
-        background-color: var(--tertiary-color);
-      }
-      .perfilHome img {
-        display: inline-block;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-      }
-      .perfilHome .informaçõesPerfil {
-        display: inline-block;
-      }
-
-      .turmasSemestreTable {
-      }
-      .turmasSemestreTable table tr:nth-child(2n + 1) {
-        background-color: var(--secondary-color);
-      }
-      .turmasSemestreTable table tr:nth-child(2n) {
-        background-color: var(--tertiary-color);
-      }
-    </style>
   </head>
 
   <body>
     <header>
-      <h1>UFC - SIGAA -</h1>
-      <h2>Sistema Integrado de Gestão de Atividades Acadêmicas</h2>
-    </header>
-    <main>
-      <nav>
-        <div><a href="./home.html">Home</a></div>
-        <div><a href="./profile.html">Perfil do usuário</a></div>
-        <div><a href="./classes.html">Disciplinas</a></div>
-        <div>
-          <a href="./resume.html">Cadastro de componentes curriculares</a>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./home.html">
+            <img
+              src="../images/Brasao_ufc.svg"
+              alt="Bootstrap"
+              width="60"
+              height="54"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="./profile.html"
+                  >Perfil do discente</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./classes.html"
+                  >Disciplinas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./resume.html"
+                  >Cadastro de componentes curriculares</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
         </div>
       </nav>
+    </header>
+    <main>
       <section class="perfilHome">
         <img src="../images/perfil.jpeg" alt="Foto de perfil do aluno" />
         <div class="informaçõesPerfil">
@@ -66,7 +85,57 @@
           <p>Curso: Engenharia da Computação</p>
           <p>IRA: +8000</p>
           <p>Créditos: +8000</p>
-          <span>Cor: <input type="color" /> </span>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Editar Perfil
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Modal title
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <input type="text" placeholder="Nome" class="d-block" />
+                  <input type="text" placeholder="Email" class="d-block" />
+                  <span>Cor: <input type="color" class="d-block" /> </span>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <div class="turmasSemestreTable">
@@ -110,11 +179,5 @@
         </table>
       </div>
     </main>
-    <footer>
-      <h1>
-        SIGAA | Copyright © 2010-2022 - Superintendência de Tecnologia da
-        Informação - UFC - (xx) xxxx-xxxx - xxxxxxxxxx.xxx.xx
-      </h1>
-    </footer>
   </body>
 </html>

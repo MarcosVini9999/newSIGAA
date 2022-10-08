@@ -1,82 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Novo Sigaa</title>
+    <style>
+      @import url(./var-colors.css);
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./CSS/reset.css" />
-  <link rel="stylesheet" href="./CSS/style.css" />
-  <title>Novo Sigaa</title>
-  <style>
-    @import url(./var-colors.css);
+      header {
+        margin-bottom: auto;
+      }
 
-    header {
-      margin-bottom: auto;
-    }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+        align-content: center;
+      }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100vh;
-      justify-content: center;
-      align-content: center;
-    }
+      .loginWrapper form {
+        max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        align-items: center;
+        gap: 5px;
+      }
 
-    .loginWrapper form {
-      max-width: 1000px;
-      display: flex;
-      flex-direction: column;
-      padding: 2rem;
-      align-items: center;
-      gap: 5px;
-    }
+      .loginWrapper {
+        background-color: var(--secondary-color);
+      }
 
-    .loginWrapper {
-      background-color: var(--secondary-color);
-    }
+      .loginWrapper form input {
+        border: 0.8px solid var(--border-color);
+        border-radius: 5px;
+      }
 
-    .loginWrapper form input {
-      border: 0.8px solid var(--border-color);
-      border-radius: 5px;
-    }
+      .loginWrapper form .inputSubmitLogin {
+        background: var(--primary-color);
+        box-shadow: 0px 0px 1px var(--black-color),
+          0px 2px 2px rgba(0, 0, 0, 0.24);
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        padding: 5px 12px;
+      }
 
-    .loginWrapper form .inputSubmitLogin {
-      background: var(--primary-color);
-      box-shadow: 0px 0px 1px var(--black-color), 0px 2px 2px rgba(0, 0, 0, 0.24);
-      border: none;
-      border-radius: 8px;
-      font-size: 15px;
-      padding: 5px 12px;
-    }
+      .loginWrapper form .inputSubmitLogin:hover {
+        background: var(--tertiary-color);
+      }
+    </style>
+  </head>
 
-    .loginWrapper form .inputSubmitLogin:hover {
-      background: var(--tertiary-color);
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>UFC - SIGAA -</h1>
-    <h2>Sistema Integrado de Gestão de Atividades Acadêmicas</h2>
-  </header>
-  <main>
-    <div class="loginWrapper">
-      <form action="./pages/home.html" method="get">
-        <input type="text" placeholder=" Usuário" required />
-        <input type="password" placeholder=" Senha" required />
-        <input type="submit" value="Entrar" class="inputSubmitLogin" />
-      </form>
-    </div>
-  </main>
-  <footer>
-    <h1>
-      SIGAA | Copyright © 2010-2022 - Superintendência de Tecnologia da
-      Informação - UFC - (xx) xxxx-xxxx - xxxxxxxxxx.xxx.xx
-    </h1>
-  </footer>
-</body>
-
+  <body>
+    <header>
+      <h1>UFC - SIGAA -</h1>
+      <h2>Sistema Integrado de Gestão de Atividades Acadêmicas</h2>
+    </header>
+    <main>
+      <div class="loginWrapper">
+        <form action="./pages/home.html" method="get">
+          <input type="text" placeholder=" Usuário" required />
+          <input type="password" placeholder=" Senha" required />
+          <input type="submit" value="Entrar" class="inputSubmitLogin" />
+        </form>
+        <div class="modal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>Modal body text goes here.</p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h1>
+        SIGAA | Copyright © 2010-2022 - Superintendência de Tecnologia da
+        Informação - UFC - (xx) xxxx-xxxx - xxxxxxxxxx.xxx.xx
+      </h1>
+    </footer>
+  </body>
 </html>

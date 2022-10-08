@@ -1,0 +1,27 @@
+.personalInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.perfilHome {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  background-color: #eff3fa;
+}
+.perfilHome img {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.perfilHome .informaçõesPerfil {
+  display: inline-block;
+}
+.turmasSemestreTable table tr:nth-child(2n + 1) {
+  background-color: #c4d2eb;
+}
+.turmasSemestreTable table tr:nth-child(2n) {
+  background-color: #eff3fa;
+}
