@@ -37,7 +37,9 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center"
+            >
               <li class="nav-item">
                 <a class="nav-link active" href="./profile.html"
                   >Perfil do discente</a
@@ -59,71 +61,206 @@
                   >Cadastro de componentes curriculares</a
                 >
               </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Sair</a
+                >
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <button
+                    type="button"
+                    class="btn btn-primary position-relative dropdown-toggle d-flex align-items-center"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <div class="spinner-grow spinner-grow-sm" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img
+                      src="../images/bootstrap-icons-1.9.1/bell.svg"
+                      alt=""
+                    />
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    >
+                      3
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </button>
+                  <ul class="dropdown-menu position-absolute w-40">
+                    <li class="dropdown-item">
+                      <span class="text-sm-left" style="max-width: 100%">
+                        21/9/2022
+                      </span>
+                      <p>Notas de engenharia lançadas...</p>
+                    </li>
+                    <li class="dropdown-item">
+                      <span class="text-sm-left" style="max-width: 100%">
+                        10/10/2022
+                      </span>
+                      <p>Novo email</p>
+                    </li>
+                    <li class="dropdown-item">
+                      <span class="text-sm-left" style="max-width: 100%">
+                        11/9/2022
+                      </span>
+                      <p>Encontro universitário foi ...</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section>
-        <p><span>MARCOS VINICIUS ANDRADE DE SOUSA</span></p>
-        <p>Semestre atual: <span>2022.2</span></p>
-        <p>CAMPUS DA UFC EM SOBRAL/DIRETORIA (11.00.01.28)</p>
-        <button
-          class="btn btn-primary d-flex justify-content-around align-items-center"
-          type="button"
-        >
-          <span
-            class="spinner-grow spinner-grow-sm"
-            role="status"
-            aria-hidden="true"
-          ></span>
-          Caixa de Mensagens
-        </button>
-      </section>
-      <nav>
-        <div class="homeScroller">
-          <button
-            class="removerButtonStyle"
-            type="button"
-            onclick="window.location.href='';"
-          >
-            Home
-          </button>
-          <button
-            class="removerButtonStyle"
-            type="button"
-            onclick="window.location.href='./profile.html';"
-          >
-            Perfil do discente
-          </button>
-          <button
-            class="removerButtonStyle"
-            type="button"
-            onclick="window.location.href='./classes.html';"
-          >
-            Disciplinas
-          </button>
-          <button
-            class="removerButtonStyle"
-            type="button"
-            onclick="window.location.href='./resume.html';"
-          >
-            Cadastro de componentes curriculares
-          </button>
+      <div
+        id="carouselExampleFade"
+        class="carousel slide carousel-fade mb-5"
+        data-bs-ride="carousel"
+        style="height: 80vh"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="../images/bannermbsigaa-1.png"
+              class="d-block w-100"
+              alt="Novo sigaa"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../images/livros.jpg"
+              class="d-block w-100"
+              alt="Livros"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../images/NEWSIGAA.png"
+              class="d-block w-100"
+              alt="Novo Sigaa"
+            />
+          </div>
         </div>
-      </nav>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="w-100">
+        <div class="row row-cols-1 row-cols-md-3 m-4">
+          <div class="col p-2">
+            <div class="card">
+              <img
+                src="../images/novoSIGAA.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Novo SIGAA</h5>
+                <p class="card-text">
+                  O novo sigaa é um sucesso, o número de alunos que migram do
+                  antigo sigaa para o novo sigaa só aumenta.
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Atulizado a 3min atrás</small>
+              </div>
+            </div>
+          </div>
+          <div class="col p-2">
+            <div class="card">
+              <img
+                src="../images/bannermbsigaa-2.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cadastro na MINHA BIBLIOTECA</h5>
+                <p class="card-text">
+                  Disponíveis para estudantes de graduação e pós-graduação da
+                  UFC.
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Atualizado a 2h atrás</small>
+              </div>
+            </div>
+          </div>
+          <div class="col p-2">
+            <div class="card">
+              <img
+                src="../images/encontroUniversitário2022.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Encontro Universitário 2022</h5>
+                <p class="card-text">
+                  O encontro universitário ocorrerá no dia xx de xx no ano de
+                  2022. Não perca !!!
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+          <div class="col p-2">
+            <div class="card">
+              <img
+                src="../images/avaliação institucional.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Avaliação institucional UFC</h5>
+                <p class="card-text">
+                  Você aluno de graduação já fez a avaliação institucional ? Não
+                  ? Então corre que já está disponível!!
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Atualizado a 2d atrás</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+    <footer>
+      <div class="d-flex justify-content-around align-items-center bg-light m">
+        <p class="m-0">
+          SIGAA | Copyright © 2010-2022 - Superintendência de Tecnologia da
+          Informação - UFC - (xx) xxxx-xxxx - xxxxxxxxxx.xxx.xx
+        </p>
+        <img
+          src="../images/Brasao_ufc.svg"
+          width="50"
+          height="44"
+          class="m-2"
+        />
+      </div>
+    </footer>
   </body>
 </html>

@@ -37,7 +37,9 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center"
+            >
               <li class="nav-item">
                 <a class="nav-link active" href="./profile.html"
                   >Perfil do discente</a
@@ -59,18 +61,59 @@
                   >Cadastro de componentes curriculares</a
                 >
               </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Sair</a
+                >
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <button
+                    type="button"
+                    class="btn btn-primary position-relative dropdown-toggle d-flex align-items-center"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <div class="spinner-grow spinner-grow-sm" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img
+                      src="../images/bootstrap-icons-1.9.1/bell.svg"
+                      alt=""
+                    />
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    >
+                      3
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </button>
+                  <ul class="dropdown-menu position-absolute w-40">
+                    <li class="dropdown-item">
+                      <span class="text-sm-left" style="max-width: 100%">
+                        21/9/2022
+                      </span>
+                      <p>Notas de engenharia lançadas...</p>
+                    </li>
+                    <li class="dropdown-item">
+                      <span class="text-sm-left" style="max-width: 100%">
+                        10/10/2022
+                      </span>
+                      <p>Novo email</p>
+                    </li>
+                    <li class="dropdown-item">
+                      <span class="text-sm-left" style="max-width: 100%">
+                        11/9/2022
+                      </span>
+                      <p>Encontro universitário foi ...</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
@@ -120,9 +163,53 @@
                       aria-valuemax="100"
                     ></div>
                   </div>
-                  <button class="removerButtonStyle styleButton d-block">
-                    Saiba Mais
+                  <button
+                    class="btn btn-primary mt-2"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"
+                  >
+                    Mais sobre a disciplina
                   </button>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel"
+                  >
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                        ALGORITMOS EM GRAFOS
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Fugit ducimus vitae provident labore aspernatur accusamus
+                      est accusantium explicabo repellendus enim eius sapiente
+                      deleniti modi, doloribus tenetur in. Exercitationem, amet
+                      tempora. Lorem ipsum dolor sit amet consectetur,
+                      adipisicing elit. Fugit ducimus vitae provident labore
+                      aspernatur accusamus est accusantium explicabo repellendus
+                      enim eius sapiente deleniti modi, doloribus tenetur in.
+                      Exercitationem, amet tempora. Lorem ipsum dolor sit amet
+                      consectetur, adipisicing elit. Fugit ducimus vitae
+                      provident labore aspernatur accusamus est accusantium
+                      explicabo repellendus enim eius sapiente deleniti modi,
+                      doloribus tenetur in. Exercitationem, amet tempora. Lorem
+                      ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+                      ducimus vitae provident labore aspernatur accusamus est
+                      accusantium explicabo repellendus enim eius sapiente
+                      deleniti modi, doloribus tenetur in. Exercitationem, amet
+                      tempora.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
